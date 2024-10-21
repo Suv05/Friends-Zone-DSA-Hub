@@ -1,4 +1,4 @@
-# Contributing to Friends Zone DSA Club
+# Contributing to Friends Zone DSA Hub
 
 Welcome to Friends Zone DSA Club! 🎉  
 This repository is for practicing DSA (Data Structures and Algorithms) together. Follow the steps below to contribute your solutions to the repository.
