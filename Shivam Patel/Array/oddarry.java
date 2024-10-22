@@ -1,5 +1,4 @@
 package Array;
-
 public class oddarry {
     public static void main(String args[]){
     int arry[] = {3,2,4,10,6,5,7};

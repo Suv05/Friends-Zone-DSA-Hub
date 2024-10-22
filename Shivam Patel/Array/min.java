@@ -1,5 +1,4 @@
 package Array;
-
 class Min {
     public static void main(String[] args) {
         int arr[] = {4,8,5,2,7,1};
