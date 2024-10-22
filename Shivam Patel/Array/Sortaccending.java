@@ -1,5 +1,4 @@
 package Array;
-
 class Sortaccending {
     public static void main(String[] args) {
         int temp = 0;

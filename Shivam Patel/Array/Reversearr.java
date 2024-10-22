@@ -1,5 +1,4 @@
 package Array;
-
 import java.util.Arrays;
 
 class Reversearr {
