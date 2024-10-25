@@ -24,37 +24,29 @@ public class MaxSubArraySum {
 //        return ts;
 //    }
 
-    public static int smallestNegativeNumberInArray(int[] arr) {
-        int smallestNegativeNumber = Integer.MAX_VALUE;
 
-        for (int n : arr) {
-            if (n < smallestNegativeNumber) {
-                smallestNegativeNumber = n;
+    public static int maxSubArraySum(int[] arr) {
+        int maxSum = Integer.MIN_VALUE;
+        int currentSum = 0;
+
+        for (int j : arr) {
+            currentSum += j;
+
+            if (currentSum > maxSum) {
+                maxSum = currentSum;
+            }
+
+            if (currentSum < 0) {
+                currentSum = 0;
             }
         }
 
-        return smallestNegativeNumber;
-    }
-
-    public static int maxSubArraySum(int[] arr) {
-        //Kedan's algorithm O(N)
-        int maxSum = Integer.MIN_VALUE;
-        int cs = 0;
-
-        for (int i : arr) {
-
-            cs = cs + i;
-
-            if (cs < 0) cs = 0;
-
-            maxSum = Math.max(cs, maxSum);
-        }
         return maxSum;
     }
 
     public static void main(String[] args) {
-        int[] arr = {-2, -4, -6, 8, -5, -3};
-        // System.out.println("maximum sum of sub array is: " + maxSubArraySum(arr));
+        int[] arr = {-2, -4, -6, -3, -5, -3};
+        System.out.println("maximum sum of sub array is: " + maxSubArraySum(arr));
 
 
     }
