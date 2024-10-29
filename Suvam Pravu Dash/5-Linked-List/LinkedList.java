@@ -45,26 +45,41 @@ public class LinkedList {
             return;
         }
 
-
         //step-2 now tails next should point the newly created node instead of null
         tail.next = newNode;
 
         //step-3 tail now move to newly created node
         tail = newNode;
 
+    }
 
+    //print the list
+    public void print() {
+        //assign head address to a temp variable
+        Node temp = head;
+
+        if (temp == null) {
+            System.out.println("Linked list is null");
+        }
+
+        while (temp != null) {
+            System.out.print(temp.data + " " + "->");
+            temp = temp.next;
+        }
+        System.out.println(" ");
     }
 
 
     public static void main(String[] args) {
 
         LinkedList ll = new LinkedList();
+
         ll.addFirst(1);
         ll.addFirst(2);
         ll.addLast(4);
         ll.addLast(5);
+        ll.print();
 
 
-        System.out.println(ll);
     }
 }
