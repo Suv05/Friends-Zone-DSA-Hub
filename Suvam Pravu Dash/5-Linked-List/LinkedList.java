@@ -12,6 +12,7 @@ public class LinkedList {
 
     public static Node head;
     public static Node tail;
+    public static int size;
 
     //methods to do all operations in a linked list
 
@@ -19,6 +20,7 @@ public class LinkedList {
     public void addFirst(int data) {
         //step-1 create a new node
         Node newNode = new Node(data);
+        size++;
 
         //if head is null means Linked List is not initialized then
         if (head == null) {
@@ -38,6 +40,7 @@ public class LinkedList {
     public void addLast(int data) {
         //step-1 create a new node
         Node newNode = new Node(data);
+        size++;
 
         //if head is null means Linked List is not initialized then
         if (head == null) {
@@ -53,6 +56,47 @@ public class LinkedList {
 
     }
 
+    //add in any position with index
+    public void add(int data, int index) {
+        if (index == 0) {
+            addFirst(data);
+            return;
+        }
+
+        Node newNode = new Node(data);
+        size++;
+        Node temp = head;
+        int i = 0;
+
+        while (i < index - 1) {
+            temp = temp.next;
+            i++;
+        }
+
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
+
+
+    //remove first
+    public int removeFirst() {
+        if (size == 0) {
+            System.out.println("Linked list is empty");
+            return Integer.MIN_VALUE;
+        } else if (size == 1) {
+            int val = head.data;
+            head = tail = null;
+            return val;
+        }
+
+        int val = head.data;
+        head = head.next; //now head moves to the second node
+        size--;
+        return val;
+
+
+    }
+
     //print the list
     public void print() {
         //assign head address to a temp variable
@@ -63,7 +107,7 @@ public class LinkedList {
         }
 
         while (temp != null) {
-            System.out.print(temp.data + " " + "->");
+            System.out.print(temp.data + "-> ");
             temp = temp.next;
         }
         System.out.println(" ");
@@ -74,11 +118,16 @@ public class LinkedList {
 
         LinkedList ll = new LinkedList();
 
-        ll.addFirst(1);
         ll.addFirst(2);
+        ll.addFirst(1);
         ll.addLast(4);
         ll.addLast(5);
+        ll.add(100, 2);
         ll.print();
+        System.out.println("Linked List size-> " + size);
+        ll.removeFirst();
+        ll.print();
+        System.out.println("Linked List size-> " + size);
 
 
     }
