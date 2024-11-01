@@ -6,18 +6,22 @@ public class PairSum1 {
     public static void pairSum(ArrayList<Integer> list, int targetSum) {
         int start = 0;
         int end = list.size() - 1;
-        for (int i = 0; i < list.size(); i++) {
-            if (list.get(start) + list.get(end) == targetSum) {
-                System.out.println("Pairs are :" + "[" + list.get(start) + "," + list.get(end) + "]");
+        
+        // Loop until start is less than end
+        while (start < end) {
+            int sum = list.get(start) + list.get(end);
+            if (sum == targetSum) {
+                System.out.println("Pairs are : [" + list.get(start) + ", " + list.get(end) + "]");
                 return;
-            } else if (list.get(start) + list.get(end) < targetSum) {
+            } else if (sum < targetSum) {
                 start++;
-            } else if (list.get(start) + list.get(end) > targetSum) {
+            } else {
                 end--;
-            }else {
-                System.out.println("no pairs found");
             }
         }
+        
+        // If no pair is found, print a message
+        System.out.println("No pairs found");
     }
 
     public static void main(String[] args) {
