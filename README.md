@@ -1,4 +1,4 @@
-# Contributing to Friends Zone DSA Club
+# Contributing to Friends Zone DSA Hub
 
 Welcome to Friends Zone DSA Club! 🎉  
 This repository is for practicing DSA (Data Structures and Algorithms) together. Follow the steps below to contribute your solutions to the repository.
@@ -68,4 +68,4 @@ To keep your local repository up to date with the latest changes, you should occ
     git pull origin master
     ```
 
-That's it! 🎉 You're all set to contribute to the Friends Zone DSA Club. If you have any questions, feel free to ask for help.
+That's it! 🎉 You're all set to contribute to the Friends Zone DSA Hub. If you have any questions, feel free to ask for help.
