@@ -123,6 +123,42 @@ public class LinkedList {
 
     }
 
+    //search in Linked list
+    public int itrSearch(int key) {
+        Node temp = head;
+        int i = 0;
+
+        while (temp != null) {
+            if (temp.data == key) {
+                return i;
+            }
+            temp = temp.next;
+            i++;
+        }
+
+        //if not found return
+        return -1;
+
+    }
+
+    //search in a recursive way
+    public int helper(int key, Node temp) {
+        if (temp == null) {
+            return -1;
+        }
+        if (temp.data == key) {
+            return 0;
+        }
+        int idx = helper(key, temp.next);
+        if (idx == -1) {
+            return -1;
+        }
+        return idx + 1;
+    }
+
+    public int recSearch(int key) {
+        return helper(key, head);
+    }
 
     //print the list
     public void print() {
@@ -141,6 +177,21 @@ public class LinkedList {
     }
 
 
+    //reverse the linked list
+    public void reverse() {
+        Node prev = null;
+        Node curr = head;
+        Node next = null;
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
+
+
     public static void main(String[] args) {
 
         LinkedList ll = new LinkedList();
@@ -151,12 +202,14 @@ public class LinkedList {
         ll.addLast(5);
         ll.add(100, 2);
         ll.print();
-        System.out.println("Linked List size-> " + size);
+        //System.out.println("Linked List size-> " + size);
         //ll.removeFirst();
-        ll.removeLast();
-        ll.print();
-        System.out.println("Linked List size-> " + size);
+        //ll.removeLast();
+        //System.out.println("Present index at: " + ll.itrSearch(100));
+        //System.out.println("Present index at: " + ll.recSearch(100));
 
+        ll.reverse();
+        ll.print();
 
     }
 }
