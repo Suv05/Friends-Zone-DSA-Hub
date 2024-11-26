@@ -26,5 +26,6 @@ class Declaration{
             }
           System.out.println();
         }
+        sc.close();
     }
 }
