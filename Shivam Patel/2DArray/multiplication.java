@@ -46,6 +46,7 @@ public class multiplication {
                 System.out.print(arr3[i][j]+ " ");             
             }
             System.out.println();
-        }        
+        }
+        sc.close();        
     }
 }
