@@ -47,14 +47,12 @@ public class basic {
         System.out.println(ans);
 
         //if you don't specify class, you can put anything inside l
-        ArrayList l = new ArrayList();
-        l.add("Shivam");
-        l.add(20);
-        l.add(true);
-        l.add('S');
-        System.out.println(l);
-
-
+        // ArrayList l = new ArrayList();
+        // l.add("Shivam");
+        // l.add(20);
+        // l.add(true);
+        // l.add('S');
+        // System.out.println(l);
 
     }
 }
