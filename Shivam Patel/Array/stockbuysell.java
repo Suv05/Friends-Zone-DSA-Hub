@@ -16,7 +16,6 @@ class stockbuysell {
         stockbuysell sc = new stockbuysell();
 
         int prices[] = {7, 1, 5, 3, 6, 4};
-        System.out.println("Maximun Profit is :"+sc.maximumProfit(prices));
+        System.out.println("Maximun Profit is : " + sc.maximumProfit(prices));
     }
 }
-
