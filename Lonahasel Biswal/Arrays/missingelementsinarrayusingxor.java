@@ -7,7 +7,7 @@ public class missingelementsinarrayusingxor {
             xor_ofgivenarray=xor_ofgivenarray^arr[i];
         }
         int xor_ofactualarray=0;
-        for(int i=0;i<=n;i++){
+        for(int i=1;i<=n;i++){
             xor_ofactualarray=xor_ofactualarray^i;
         }
         int missingelement=xor_ofactualarray^xor_ofgivenarray;
