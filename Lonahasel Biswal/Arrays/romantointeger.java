@@ -9,7 +9,7 @@ public class romantointeger{
             int currentvalue=getValue(str.charAt(i));
 
             if(currentvalue<prevvalue){
-                result=result-currentvalue;
+                result=result+currentvalue;
             }
             else{
                 result=result+currentvalue;
