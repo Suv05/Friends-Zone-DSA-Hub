@@ -20,6 +20,6 @@ class minimizeheight {
     public static void main(String[] args) {
         minimizeheight sc = new minimizeheight();
         int arr[] = {3,9,12,16,20};
-        System.out.println(sc.getMinDiff(arr, 3));
+        System.out.println("Smallest Difference is : "+sc.getMinDiff(arr, 3));
     }
 }
